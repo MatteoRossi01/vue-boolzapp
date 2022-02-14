@@ -141,7 +141,7 @@ main {
     align-items: center;
 }
 
-.fa-magnifying-glass {
+.search-glass {
     font-size: 20px;
     color: #B1B1B1;
     margin-left: 10px;
@@ -163,7 +163,6 @@ main {
 .box-list {
     height: 375px;
     width: 95%;
-    margin-top: 5px;
     background-color: #FFF;
 }
 
@@ -222,5 +221,27 @@ main {
     height: 100%;
     border: 1px solid #000;
 }
+
+/* Box chat corrente */
+.current-chat {
+    height: 65px;
+    padding-left: 10px;
+    background-color: #EBEBEB;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.name-chat {
+    display: flex;
+    flex-direction: column;
+}
+
+.ultimo-accesso {
+    margin-left: 10px;
+    font-size: 12px;
+    color: #6A7376;
+}
+/* Box chat corrente */
 
 /* Sezione chat */
