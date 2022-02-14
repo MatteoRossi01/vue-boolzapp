@@ -1,0 +1,48 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #DBDCD4;
+}
+
+header {
+    height: 100px;
+    background-color: #1C9688;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.container-app {
+    min-width: 1050px;
+    height: 550px;
+    border: 1px solid #000;
+    position: absolute; 
+    top: 30px;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Sezione lista contatti */
+.container-list-contact {
+    width: 35%;
+    height: 100%;
+    border: 1px solid #000;
+}
+
+/* Sezione lista contatti */
+
+/* Sezione chat */
+.container-chat {
+    width: 65%;
+    height: 100%;
+    border: 1px solid #000;
+}
+
+/* Sezione chat */
