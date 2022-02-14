@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
 }
 
 body {
@@ -20,10 +21,10 @@ main {
 
 .container-app {
     min-width: 1050px;
-    height: 550px;
+    height: 570px;
     border: 1px solid #000;
     position: absolute; 
-    top: 30px;
+    top: 20px;
     z-index: 2;
     display: flex;
     flex-wrap: wrap;
@@ -35,6 +36,183 @@ main {
     height: 100%;
     border: 1px solid #000;
 }
+
+/* Box user */
+.box-user {
+    height: 65px;
+    padding-left: 10px;
+    background-color: #EBEBEB;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box-nome {
+    display: flex;
+    align-items: center;
+}
+
+.avatar-io {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.nome-utente {
+    padding-left: 10px;
+    font-weight: 550;
+}
+
+.box-option-user {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 10px;
+}
+
+.option-user {
+    font-size: 22px;
+    padding: 0px 12px;
+    color: #B1B1B1;
+}
+/* Box user */
+
+/* Box notifiche desktop */
+.box-desktop {
+    height: 70px;
+    background-color: #8EDAFD;
+    display: flex;
+    align-items: center;
+}
+
+.circle-bell {
+    width: 50px;
+    height: 50px;
+    background-color: #F2FCFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+.fa-bell-slash {
+    font-size: 19px;
+    color: #8EDAFD;
+}
+
+.box-text-notifiche {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-notifiche {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.link-notifiche {
+    color: #4E7385;
+    font-size: 14px;
+}
+/* Box notifiche desktop */
+
+/* Box contatti */
+.box-contact {
+    width: 100%;
+    height: 430px;
+    background-color: #FAFAFA;
+}
+
+.box-search-contact {
+    height: 48px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FAFAFA;
+}
+
+.search {
+    height: 38px;
+    width: 90%;
+    background-color: #FFF;
+    border: 2px solid #F5F5F5;
+    display: flex;
+    align-items: center;
+}
+
+.fa-magnifying-glass {
+    font-size: 20px;
+    color: #B1B1B1;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#search-contact {
+    height: 100%;
+    width: 95%;
+    padding-left: 10px;
+    margin-left: 15px;
+    border: 0px;
+}
+
+#search-contact:focus {
+    outline: 1px solid #F5F5F5;
+}
+
+.box-list {
+    height: 375px;
+    width: 95%;
+    margin-top: 5px;
+    background-color: #FFF;
+}
+
+.box-option-contact {
+    height: 80px;
+    border-bottom: 1px solid #F5F5F5;
+    display: flex;
+    align-items: center;
+}
+
+.img-list {
+    width: 60px;
+    border-radius: 50%;
+    margin-left: 25px;
+}
+
+.name-contact {
+    margin-top: 10px;
+    margin-left: 20px;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.mess-preview {
+    margin-top: 4px;
+    color: #B6B9BB;
+    font-size: 12px;
+}
+
+.data {
+    color: #B6B9BB;
+    font-size: 12px;
+    position: absolute;
+    top: 0px;
+    right: 15px;
+}
+
+.select {
+    background-color: #EAEBEB;
+}
+/* Box contatti */
 
 /* Sezione lista contatti */
 
