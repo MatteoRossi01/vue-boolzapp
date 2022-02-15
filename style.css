@@ -19,10 +19,15 @@ main {
     justify-content: center;
 }
 
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 .container-app {
     min-width: 1050px;
     height: 570px;
-    border: 1px solid #000;
     position: absolute; 
     top: 20px;
     z-index: 2;
@@ -34,7 +39,7 @@ main {
 .container-list-contact {
     width: 35%;
     height: 100%;
-    border: 1px solid #000;
+    border: 1px solid #D6D6D6;
 }
 
 /* Box user */
@@ -219,7 +224,7 @@ main {
 .container-chat {
     width: 65%;
     height: 100%;
-    border: 1px solid #000;
+    border: 1px solid #D6D6D6;
 }
 
 /* Box chat corrente */
@@ -243,5 +248,103 @@ main {
     color: #6A7376;
 }
 /* Box chat corrente */
+
+/* Box chat */
+.box-chat {
+    width: 100%;
+    height: 440px;
+    background-image: url(img/mine.jpg);
+    display: flex;
+    justify-content: center;
+}
+
+.messages {
+    margin-top: 20px;
+    height: 95%;
+    width: 80%;
+}
+
+.user-message {
+    min-width: 40%;
+    max-width: 100%;
+    
+}
+
+.message-1 {
+    min-width: 30%;
+    max-width: 50%;
+    padding: 18px 10px;
+    background-color: #D6F9BA;
+    border-radius: 10px;
+    line-height: 22px;
+    float: right;
+    margin-top: 10px;
+    font-size: 15px;
+    position: relative;
+}
+
+.message-2 {
+    min-width: 30%;
+    max-width: 50%;
+    padding: 18px 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    line-height: 22px;
+    float: left;
+    margin-top: 10px;
+    font-size: 15px;
+    position: relative;
+}
+
+.data-message-1 {
+    color: #B6B9BB;
+    font-size: 11px;
+    position: absolute;
+    bottom: 0px;
+    right: 7px;
+}
+
+.data-message-2 {
+    color: #B6B9BB;
+    font-size: 11px;
+    position: absolute;
+    bottom: 0px;
+    right: 7px;
+}
+/* Box chat */
+
+/* Box text */
+.box-text {
+    width: 100%;
+    height: 60px;
+    background-color: #F4EEEA;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#user-write {
+    width: 88%;
+    padding: 14px 15px;
+    margin: 0px 15px;
+    border-radius: 10px;
+    border: 0px;
+}
+
+#user-write:focus {
+    outline: 0px;
+}
+
+.fa-face-smile {
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+.fa-microphone {
+    font-size: 20px;
+    margin-right: 15px;
+}
+/* Box text */
 
 /* Sezione chat */
