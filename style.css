@@ -176,6 +176,11 @@ main {
     border-bottom: 1px solid #F5F5F5;
     display: flex;
     align-items: center;
+    cursor: pointer;
+}
+
+.box-option-contact:hover {
+    background-color: #EAEBEB;
 }
 
 .img-list {
@@ -256,21 +261,25 @@ main {
     background-image: url(img/mine.jpg);
     display: flex;
     justify-content: center;
+    overflow-y: scroll;
 }
 
 .messages {
     margin-top: 20px;
     height: 95%;
     width: 80%;
+    
 }
 
 .user-message {
     min-width: 40%;
     max-width: 100%;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
-.message-1 {
+.sent {
     min-width: 30%;
     max-width: 50%;
     padding: 18px 10px;
@@ -283,7 +292,7 @@ main {
     position: relative;
 }
 
-.message-2 {
+.recived {
     min-width: 30%;
     max-width: 50%;
     padding: 18px 10px;
@@ -294,6 +303,7 @@ main {
     margin-top: 10px;
     font-size: 15px;
     position: relative;
+    align-self: flex-start;
 }
 
 .data-message-1 {
@@ -304,12 +314,8 @@ main {
     right: 7px;
 }
 
-.data-message-2 {
-    color: #B6B9BB;
-    font-size: 11px;
-    position: absolute;
-    bottom: 0px;
-    right: 7px;
+.box-message {
+    
 }
 /* Box chat */
 

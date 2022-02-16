@@ -10,116 +10,87 @@
 </head>
 <body>
 
-    <header>
-
-    </header>
+    <header></header>
 
     <main>
-
+        
         <!-- Container app -->
-        <div class="container-app">
-
+        <div class="container-app" id="root">
+            
             <!-- Sezione lista dei contatti -->
             <div class="container-list-contact">
 
-                <!-- Box user -->
-                <div class="box-user">
+                    <!-- Box user -->
+                    <div class="box-user">
 
-                    <!-- Nome utente -->
-                    <div class="box-nome">
+                        <!-- Nome utente -->
+                        <div class="box-nome">
 
-                        <img class="avatar-io" src="img/avatar_io.jpg" alt="">
-                        <span class="nome-utente">Nome Utente</span>
+                            <img class="avatar-io" src="img/avatar_io.jpg" alt="">
+                            <span class="nome-utente">Nome Utente</span>
 
-                    </div>
-                    <!-- Nome utente -->
-
-                    <!-- Box opzioni utente -->
-                    <div class="box-option-user">
-
-                        <i class="option-user fa-solid fa-circle-notch"></i>
-                        <i class="option-user fa-solid fa-message"></i>
-                        <i class="option-user fa-solid fa-ellipsis-vertical"></i>
-
-                    </div>
-                    <!-- Box opzioni utente -->
-
-                </div>
-                <!-- Box user -->
-
-                <!-- Box notifiche desktop -->
-                <div class="box-desktop">
-
-                    <div class="circle-bell">
-                        <i class="fa-solid fa-bell-slash"></i>
-                    </div>
-
-                    <div class="box-text-notifiche">
-                        <span class="text-notifiche">Ricevi notifiche di nuovi messaggi</span>
-                        <a class="link-notifiche" href="#">Attiva notifiche desktop</a>
-                    </div>
-
-                </div>
-                <!-- Box notifiche desktop -->
-
-                <!-- Box contatti -->
-                <div class="box-contact">
-
-                    <!-- Box ricerca contatti -->
-                    <div class="box-search-contact">
-
-                        <div class="search">
-                            <i class="search-glass fa-solid fa-magnifying-glass"></i>
-                            <input type="text" id="search-contact" placeholder="Crea o inizia una nuova chat">
                         </div>
-        
+                        <!-- Nome utente -->
+
+                        <!-- Box opzioni utente -->
+                        <div class="box-option-user">
+
+                            <i class="option-user fa-solid fa-circle-notch"></i>
+                            <i class="option-user fa-solid fa-message"></i>
+                            <i class="option-user fa-solid fa-ellipsis-vertical"></i>
+
+                        </div>
+                        <!-- Box opzioni utente -->
+
                     </div>
-                    <!-- Box ricerca contatti -->
+                    <!-- Box user -->
 
-                    <!-- Box lista -->
-                    <div class="box-list">
+                    <!-- Box notifiche desktop -->
+                    <div class="box-desktop">
 
-                        <div class="box-option-contact select">
-                            <img class="img-list" src="img/avatar_1.jpg" alt="">
-                            <div class="name-contact">
-                                <span class="name">Michele</span>
-                                <span class="mess-preview">Tutto fatto! ...</span>
-                                <span class="data">10/01/2020 16:15:22</span>
+                        <div class="circle-bell">
+                            <i class="fa-solid fa-bell-slash"></i>
+                        </div>
+
+                        <div class="box-text-notifiche">
+                            <span class="text-notifiche">Ricevi notifiche di nuovi messaggi</span>
+                            <a class="link-notifiche" href="#">Attiva notifiche desktop</a>
+                        </div>
+
+                    </div>
+                    <!-- Box notifiche desktop -->
+
+                    <!-- Box contatti -->
+                    <div class="box-contact">
+
+                        <!-- Box ricerca contatti -->
+                        <div class="box-search-contact">
+
+                            <div class="search">
+                                <i class="search-glass fa-solid fa-magnifying-glass"></i>
+                                <input type="text" id="search-contact" placeholder="Crea o inizia una nuova chat">
                             </div>
+            
                         </div>
+                        <!-- Box ricerca contatti -->
 
-                        <div class="box-option-contact">
-                            <img class="img-list" src="img/avatar_2.jpg" alt="">
-                            <div class="name-contact">
-                                <span class="name">Fabio</span>
-                                <span class="mess-preview">Mi piacerebbe ma devo andare a  ...</span>
-                                <span class="data">20/03/2020 16:35:22</span>
-                            </div>
-                        </div>
+                        <!-- Box lista -->
+                        <div class="box-list">
 
-                        <div class="box-option-contact">
-                            <img class="img-list" src="img/avatar_3.jpg" alt="">
-                            <div class="name-contact">
-                                <span class="name">Samuele</span>
-                                <span class="mess-preview">Ah scusa! ...</span>
-                                <span class="data">28/03/2020 16:15:22</span>
-                            </div>
-                        </div>
+                            <div class="box-option-contact" v-for="(contact, index) in contacts" @click="setContactActive(index)">
+                                <img class="img-list" :src=" `img/avatar${contact.avatar}.jpg` " alt="">
+                                <div class="name-contact">
+                                    <span class="name">{{contact.name}}</span>
+                                    <span class="mess-preview">{{contact.messages[contact.messages.length -1] .text.slice(0,13) + '...'}}</span>
+                                    <span class="data">{{contact.messages[contact.messages.length -1].date}}</span>
+                                </div>
+                            </div>                        
 
-                        <div class="box-option-contact">
-                            <img class="img-list" src="img/avatar_4.jpg" alt="">
-                            <div class="name-contact">
-                                <span class="name">Luisa</span>
-                                <span class="mess-preview">Si ma preferirei andare al ci ...</span>
-                                <span class="data">10/01/2020 15:50:22</span>
-                            </div>
                         </div>
+                        <!-- Box lista -->
 
                     </div>
-                    <!-- Box lista -->
-
-                </div>
-                <!-- Box contatti -->
+                    <!-- Box contatti -->
 
             </div>
             <!-- Sezione lista dei contatti -->
@@ -133,12 +104,12 @@
                     <!-- Nome utente -->
                     <div class="box-nome">
 
-                        <img class="avatar-io" src="img/avatar_1.jpg" alt="">
-                            <div class="name-chat">
-                                <span class="nome-utente">Michele</span>
-                                <span class="ultimo-accesso">Ultimo accesso oggi 10/01/2020</span>
-                                <span class="ultimo-accesso">Alle 16:15:22</span>
-                            </div>
+                        <img class="avatar-io" :src="`img/avatar${contacts[active].avatar}.jpg`" alt="">
+                        <div class="name-chat">
+                            <span class="nome-utente">{{contacts[active].name}}</span>
+                            <span class="ultimo-accesso">Ultimo accesso oggi  10/01/2020 </span>
+                            <span class="ultimo-accesso">Alle 16:15:22</span>
+                        </div>
 
                     </div>
                     <!-- Nome utente -->
@@ -162,22 +133,14 @@
                     <div class="messages">
 
                         <div class="user-message clearfix">
-                            <div class="message-1">
-                                Hai portato a spasso il cane?
-                                <span class="data-message-1">10/01/2020 16:15:22</span>
-                            </div>
-                        </div>
-
-                        <div class="user-message clearfix">
-                            <div class="message-2">
-                                Tutto fatto!
-                                <span class="data-message-2">10/01/2020 16:15:22</span>
+                            <div class="box-message" :class="(message.status=='sent') ? 'sent' : 'recived'" v-for="(message,index) in contacts[active].messages">
+                                <span class="text-message">{{message.text}}</span>
+                                <span class="data-message-1">{{message.date}}</span>
                             </div>
                         </div>
 
                     </div>
-                    
-
+                        
                 </div>
                 <!-- Box chat -->
 
@@ -185,7 +148,7 @@
                 <div class="box-text">
 
                     <i class="fa-regular fa-face-smile"></i>
-                    <input type="text" id="user-write" placeholder="Scrivi un messaggio">
+                    <input type="text" id="user-write" placeholder="Scrivi un messaggio" v-model="newText" @keyup.enter="newMessage()">
                     <i class="fa-solid fa-microphone"></i>
 
                 </div>
@@ -199,9 +162,9 @@
 
     </main>
 
-    <footer>
-
-    </footer>
-    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script>dayjs().format()</script>
 </body>
 </html>
