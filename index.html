@@ -20,8 +20,8 @@
             <!-- Sezione lista dei contatti -->
             <div class="container-list-contact">
 
-                    <!-- Box user -->
-                    <div class="box-user">
+                <!-- Box user -->
+                <div class="box-user">
 
                         <!-- Nome utente -->
                         <div class="box-nome">
@@ -42,11 +42,11 @@
                         </div>
                         <!-- Box opzioni utente -->
 
-                    </div>
-                    <!-- Box user -->
+                </div>
+                <!-- Box user -->
 
-                    <!-- Box notifiche desktop -->
-                    <div class="box-desktop">
+                <!-- Box notifiche desktop -->
+                <div class="box-desktop">
 
                         <div class="circle-bell">
                             <i class="fa-solid fa-bell-slash"></i>
@@ -57,18 +57,18 @@
                             <a class="link-notifiche" href="#">Attiva notifiche desktop</a>
                         </div>
 
-                    </div>
-                    <!-- Box notifiche desktop -->
+                </div>
+                <!-- Box notifiche desktop -->
 
-                    <!-- Box contatti -->
-                    <div class="box-contact">
+                <!-- Box contatti -->
+                <div class="box-contact">
 
                         <!-- Box ricerca contatti -->
                         <div class="box-search-contact">
 
                             <div class="search">
                                 <i class="search-glass fa-solid fa-magnifying-glass"></i>
-                                <input type="text" id="search-contact" placeholder="Crea o inizia una nuova chat">
+                                <input type="text" id="search-contact" placeholder="Crea o inizia una nuova chat" v-model="search" @keyup="filteredText()">
                             </div>
             
                         </div>
@@ -77,7 +77,7 @@
                         <!-- Box lista -->
                         <div class="box-list">
 
-                            <div class="box-option-contact" v-for="(contact, index) in contacts" @click="setContactActive(index)">
+                            <div class="box-option-contact" v-for="(contact, index) in contacts" @click="setContactActive(index)" v-if="contact.visible==true">
                                 <img class="img-list" :src=" `img/avatar${contact.avatar}.jpg` " alt="">
                                 <div class="name-contact">
                                     <span class="name">{{contact.name}}</span>
@@ -89,8 +89,8 @@
                         </div>
                         <!-- Box lista -->
 
-                    </div>
-                    <!-- Box contatti -->
+                </div>
+                <!-- Box contatti -->
 
             </div>
             <!-- Sezione lista dei contatti -->

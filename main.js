@@ -111,6 +111,7 @@ const root = new Vue (
 
             ],
 
+            search: '',
             newText: '',
             active: 0,
                 
@@ -123,16 +124,14 @@ const root = new Vue (
             },
 
             /* Funzione per aggiungere il messaggio e per la risposta */
-            newMessage(){
+            newMessage() {
 
                 this.contacts[this.active].messages.push(
-
                     {
                         text: this.newText,
                         date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                         status: 'sent',
                     }
-
                 )
 
                 this.newText ='';
@@ -140,21 +139,28 @@ const root = new Vue (
                 setTimeout(() => {
 
                     this.contacts[this.active].messages.push(
-
                         {
                             text: "ok!",
                             date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                             status: 'received',
                         }
-    
                     ) 
+
                 }, 1000);
 
-     
             },
 
-        }
- 
+            filteredText(){
+                this.contacts.forEach((element)=>{
+                    if(element.name.toLowerCase().includes(this.search.toLowerCase())){
+                        element.visible=true;
+                    }else{
+                        element.visible=false;
+                    }
+                });
+            },
+
+        },
     }
 
 );
